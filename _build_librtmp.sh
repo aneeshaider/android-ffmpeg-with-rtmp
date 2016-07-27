@@ -7,9 +7,9 @@ function build_librtmp {
 
   cd ${src_root}/rtmpdump/librtmp
 
-  # patch the Makefile to use an Android-friendly versioning scheme
-  patch -u Makefile ${patch_root}/librtmp-Makefile.patch >> ${build_log} 2>&1 || \
-    die "Couldn't patch librtmp Makefile!"
+  # patch the Makefile to use an Android-friendly versioning scheme, NO NEED NOW, version is set by default
+  #patch -u Makefile ${patch_root}/librtmp-Makefile.patch >> ${build_log} 2>&1 || \
+  #  die "Couldn't patch librtmp Makefile!"
 
   openssl_dir=${src_root}/openssl-android
   prefix=${src_root}/rtmpdump/librtmp/android/arm
